@@ -1,12 +1,12 @@
 <!-- TOC -->
 
 - [搭建javascrpt笔试/测试环境](#搭建javascrpt笔试测试环境)
-        - [下面的方法介绍如何从0搭建一个可以测试JavaScript代码的环境：](#下面的方法介绍如何从0搭建一个可以测试javascript代码的环境)
-        - [本文件如何下载并应用？](#本文件如何下载并应用)
+    - [下面的方法介绍如何从0搭建一个可以测试JavaScript代码的环境：](#下面的方法介绍如何从0搭建一个可以测试javascript代码的环境)
+    - [本文件如何下载并应用？](#本文件如何下载并应用)
 - [下面的方法介绍node.js测试/笔试方法：](#下面的方法介绍nodejs测试笔试方法)
     - [下面是有关输入条件（行数）的技巧/方法：](#下面是有关输入条件行数的技巧方法)
-            - [1. 单行输入](#1-单行输入)
-            - [2. 多行输入](#2-多行输入)
+        - [1. 单行输入](#1-单行输入)
+        - [2. 多行输入](#2-多行输入)
 - [下面是我遇到的一些笔试题：](#下面是我遇到的一些笔试题)
 
 <!-- /TOC -->
@@ -17,7 +17,7 @@
 如下图所示：
 ![截图](./static/cut1.png)
 
-##### 下面的方法介绍如何从0搭建一个可以测试JavaScript代码的环境：
+#### 下面的方法介绍如何从0搭建一个可以测试JavaScript代码的环境：
 1. 新建一个文件夹，在文件夹内，安装cnpm install readline-sync
 2. 添加一个index.js文件，文件中输入以下代码：
 ```javascript
@@ -34,7 +34,7 @@ var print = console.log;
 [参考文档](https://www.cnblogs.com/yujihang/p/7413906.html)
 
 
-##### 本文件如何下载并应用？
+#### 本文件如何下载并应用？
 1. 下载本project到本地
 `git clone https://github.com/wuyve/Javascript-test.git`
 2. 安装相关依赖包
@@ -51,7 +51,7 @@ var print = console.log;
 3. 运行/测试/调试代码`node [文件名]`或`node [文件名.js]`
 
 #### 下面是有关输入条件（行数）的技巧/方法：
-###### 1. 单行输入
+##### 1. 单行输入
 ```javascript
 var readline = require('readline');
 var readlineTest = readline.createInterface({
@@ -71,7 +71,7 @@ readlineTest.on('line', function(line){
     readlineTest.close();
 })
 ```
-###### 2. 多行输入
+##### 2. 多行输入
 ```javascript
 var readline = require('readline');
 var readlineTest = readline.createInterface({
