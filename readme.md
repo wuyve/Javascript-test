@@ -104,6 +104,7 @@ readlineTest.on('close', function() {
 
 ### 下面是我遇到的一些笔试题：
 1. 去哪儿编程题1（语言：Node.js， 通过率：86%）
+
     由于航司规定，对单次搜索的成人和儿童数量有如下限制：
     1. 成人至少选择一个，儿童可不选
     2. 一次最多只能指定9个乘机人
@@ -116,11 +117,11 @@ readlineTest.on('close', function() {
         >> 第一行：成人可选择的数量
         >> 第二行：儿童可选择的数量
 例如：
-> 输入
->> 1,2
-> 输出
->> 1,2,3,4,5,6,7
->> 0,1,2
+输入
+> 1,2
+输出
+> 1,2,3,4,5,6,7
+> 0,1,2
 ```javascript
 var readline = require('readline');
 var readlineTest = readline.createInterface({
@@ -161,16 +162,17 @@ readlineTest.on('line', function(line){
 ```
 
 2. 去哪儿编程题2(语言：JavaScript，通过率： AC)
+
     为了能让用户尽快找到低价机票，我们从服务器渠道航班数据后需要按价格进行排序，然后展示给用户。
     排序规则：
     1. 按照价格从低到高进行排序
     2. 相同价格按照 rank 值同高到低排序
     3. 排序完成后按行输出 name:rank:code:price
-    > 输入
-        >> 一行包含航班数据的json字符串
-    > 输出
-        >> 按行输出排序后的航班 
-        >> 行模板：name:rank:code:price
+    输入
+        > 一行包含航班数据的json字符串
+    输出
+        > 按行输出排序后的航班 
+        > 行模板：name:rank:code:price
 测试用例：
 > 输入
 >> {"k3845": {"name": "name3012","price": 2715,"rank": 1},"k3489": {"name": "name2855","price": 3105,"rank": 1},"k845": {"name": "name7788","price": 1111,"rank": 1},"k77889": {"name":"name7746588","price": 1111,"rank": 2}}
