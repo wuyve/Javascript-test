@@ -174,7 +174,7 @@ readlineTest.on('line', function(line){
 })
 ```
 
-2. 去哪儿编程题2(语言：JavaScript，通过率： AC)
+2. 去哪儿编程题2(语言：Node.js，通过率： AC)
 
     为了能让用户尽快找到低价机票，我们从服务器渠道航班数据后需要按价格进行排序，然后展示给用户。
     排序规则：
@@ -193,6 +193,7 @@ readlineTest.on('line', function(line){
         > 行模板：name:rank:code:price
         
 测试用例：
+
 输入
 
 > {"k3845": {"name": "name3012","price": 2715,"rank": 1},"k3489": {"name": "name2855","price": 3105,"rank": 1},"k845": {"name": "name7788","price": 1111,"rank": 1},"k77889": {"name":"name7746588","price": 1111,"rank": 2}}
@@ -239,4 +240,46 @@ readlineTest.on('line', function(line){
     readlineTest.close();
 })
 ```
+
+3. 腾讯笔试：数组平铺（语言： Node.js； 通过率： 笔试结束后写的，未测试通过率）
+
+测试用例：
+
+输入
+
+> [1,2,[3,4,[5,6,[7,[8,9]]]]]
+
+输出
+
+> [1,2,3,4,5,6,7,8,9]
+
+```javascript
+var readline = require('readline');
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+var arrIn = []
+var arrOut = []
+rl.on('line', (input) => {
+    arrIn = input;
+    console.log('arrIn', arrIn);
+    console.log(typeof arrIn);
+    var pattern = /^[0-9]*$/
+    for (var i = 0; i < arrIn.length; i++) {
+        console.log(arrIn[i])
+        if (arrIn[i].match(pattern)) {
+            arrOut.push(~~arrIn[i])
+        }
+        console.log(arrOut)
+    }
+    // arrOut = arrIn.split(",").map(item => Number(item));
+    console.log('arrOut', arrOut);
+    console.log(typeof arrOut);
+    rl.close()
+})
+
+```
+
+
 编程题目持续更新......
