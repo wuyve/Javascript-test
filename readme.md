@@ -117,11 +117,17 @@ readlineTest.on('close', function() {
         >> 第一行：成人可选择的数量
         >> 第二行：儿童可选择的数量
 例如：
+
 输入
+
 > 1,2
+
 输出
+
 > 1,2,3,4,5,6,7
+
 > 0,1,2
+
 ```javascript
 var readline = require('readline');
 var readlineTest = readline.createInterface({
@@ -174,13 +180,20 @@ readlineTest.on('line', function(line){
         > 按行输出排序后的航班 
         > 行模板：name:rank:code:price
 测试用例：
-> 输入
->> {"k3845": {"name": "name3012","price": 2715,"rank": 1},"k3489": {"name": "name2855","price": 3105,"rank": 1},"k845": {"name": "name7788","price": 1111,"rank": 1},"k77889": {"name":"name7746588","price": 1111,"rank": 2}}
-> 输出
->> name7746588:2:k77889:1111
->> name7788:1:k845:1111
->> name3012:1:k3845:2715
->> name2855:1:k3489:3105
+输入
+
+> {"k3845": {"name": "name3012","price": 2715,"rank": 1},"k3489": {"name": "name2855","price": 3105,"rank": 1},"k845": {"name": "name7788","price": 1111,"rank": 1},"k77889": {"name":"name7746588","price": 1111,"rank": 2}}
+
+输出
+
+> name7746588:2:k77889:1111
+
+> name7788:1:k845:1111
+
+> name3012:1:k3845:2715
+
+> name2855:1:k3489:3105
+
 ```javascript
 var readline = require('readline');
 var readlineTest = readline.createInterface({
