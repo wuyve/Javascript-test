@@ -281,5 +281,43 @@ rl.on('line', (input) => {
 
 ```
 
+4. 腾讯笔试： 计算出输入的年份中二月有多少天（语言：Node.js； 通过率：AC）
+
+测试用例：
+
+输入：
+
+> 2019
+
+输出：
+
+> 28
+
+```javascript
+//  引入readline模块
+var readline = require('readline');
+
+//  创建一个readline接口实例
+var readlineTest = readline.createInterface({
+    
+    input: process.stdin,
+    output: process.stdout
+});
+var year = 0;
+var days = 0;
+readlineTest.on('line', function(line){
+    year = line;
+    if (year % 4 === 0 && year % 10 !== 0 || year % 400 === 0) {
+        console.log('29');
+    } else {
+        console.log('28');
+    }
+});
+//当readlineTest执行'close'命令时，输入流关闭，程序结束。
+readlineTest.on('close', function() {
+    process.exit(0);
+});
+```
+
 
 编程题目持续更新......
